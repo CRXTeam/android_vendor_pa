@@ -14,7 +14,7 @@
 
 # Check for target product
 
-ifeq (pa_galaxysmtd,$(TARGET_PRODUCT))
+ifeq (pa_p700,$(TARGET_PRODUCT))
 
 # OVERLAY_TARGET adds overlay asset source
 OVERLAY_TARGET := pa_hdpi
@@ -28,14 +28,15 @@ $(call inherit-product, vendor/pa/configs/telephony.mk)
 include vendor/pa/main.mk
 
 # Inherit device configuration
-$(call inherit-product, device/samsung/galaxysmtd/full_galaxysmtd.mk)
+$(call inherit-product, device/lge/p700/full_p700.mk)
 
 # Override AOSP build properties
-PRODUCT_NAME := pa_galaxysmtd
-PRODUCT_DEVICE := galaxysmtd
-PRODUCT_BRAND := samsung
-PRODUCT_MANUFACTURER := samsung
-PRODUCT_MODEL := GT-I9000
-PRODUCT_BUILD_PROP_OVERRIDES += PRODUCT_NAME=GT-I9000 TARGET_DEVICE=GT-I9000 BUILD_FINGERPRINT=samsung/GT-I9000/GT-I9000:2.3.5/GINGERBREAD/XXJVT:user/release-keys PRIVATE_BUILD_DESC="GT-I9000-user 2.3.5 GINGERBREAD XXJVT release-keys"
+PRODUCT_DEVICE := p700
+PRODUCT_NAME := pa_p700
+PRODUCT_BRAND := lge
+PRODUCT_MODEL := LG-P700
+PRODUCT_MANUFACTURER := LGE
+
+PRODUCT_BUILD_PROP_OVERRIDES += PRODUCT_NAME=u0_open_eu BUILD_FINGERPRINT=lge/u0_open_eu/u0:4.0.3/IML74K/lgp700-V10a.20120418.144808:user/release-keys PRIVATE_BUILD_DESC="u0_open_eu-user 4.0.3 IML74K lgp700-V10a.20120418.144808 release-keys"
 
 endif
