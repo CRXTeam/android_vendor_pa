@@ -14,7 +14,7 @@
 
 # Check for target product
 
-ifeq (pa_i9300,$(TARGET_PRODUCT))
+ifeq (pa_huashan,$(TARGET_PRODUCT))
 
 # OVERLAY_TARGET adds overlay asset source
 OVERLAY_TARGET := pa_xhdpi
@@ -28,18 +28,14 @@ $(call inherit-product, vendor/pa/configs/telephony.mk)
 include vendor/pa/main.mk
 
 # Inherit device configuration
-$(call inherit-product, device/samsung/i9300/full_i9300.mk)
+$(call inherit-product, device/sony/huashan/full_huashan.mk)
 
 # Override AOSP build properties
-PRODUCT_NAME := pa_i9300
-PRODUCT_DEVICE := i9300
-PRODUCT_BRAND := samsung
-PRODUCT_MANUFACTURER := samsung
-PRODUCT_MODEL := GT-I9300
-PRODUCT_BUILD_PROP_OVERRIDES += \
-    PRODUCT_NAME=m0xx \
-    TARGET_DEVICE=m0 \
-    BUILD_FINGERPRINT="samsung/m0xx/m0:4.3/JSS15J/I9300XXUGMJ9:user/release-keys" \
-    PRIVATE_BUILD_DESC="m0xx-user 4.3 JSS15J I9300XXUGMJ9 release-keys"
+PRODUCT_NAME := pa_huashan
+PRODUCT_DEVICE := huashan
+PRODUCT_BRAND := Sony
+PRODUCT_MANUFACTURER := Sony
+PRODUCT_MODEL := C5303
+PRODUCT_BUILD_PROP_OVERRIDES += PRODUCT_NAME=C5303_1272-3352 BUILD_FINGERPRINT=Sony/C5303_1272-3352/C5303:4.1.2/12.0.A.2.254/Aff_nw:user/release-keys PRIVATE_BUILD_DESC="C5303-user 4.1.2 12.0.A.2.254 Aff_nw test-keys"
 
 endif

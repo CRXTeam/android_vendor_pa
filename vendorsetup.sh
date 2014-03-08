@@ -9,7 +9,7 @@ add_lunch_combo pa_geeb-userdebug
 add_lunch_combo pa_hercules-userdebug
 add_lunch_combo pa_hlte-userdebug
 add_lunch_combo pa_i605-userdebug
-add_lunch_combo pa_i9300-userdebug
+add_lunch_combo pa_huashan-userdebug
 add_lunch_combo pa_jflte-userdebug
 add_lunch_combo pa_l900-userdebug
 add_lunch_combo pa_ls980-userdebug
