@@ -30,6 +30,8 @@ include vendor/pa/main.mk
 # Inherit device configuration
 $(call inherit-product, device/lge/p700/full_p700.mk)
 
+PRODUCT_PACKAGES += Trebuchet
+
 # Override AOSP build properties
 PRODUCT_DEVICE := p700
 PRODUCT_NAME := pa_p700

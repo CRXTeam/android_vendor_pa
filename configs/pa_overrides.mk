@@ -26,21 +26,20 @@ PRODUCT_PACKAGES += \
     ScreenRecorder \
     libscreenrecorder
 
-# Source or prebuilt PA-prefs logic
-#ifneq ($(PREFS_FROM_SOURCE),true)
-#    PRODUCT_COPY_FILES += \
-#        vendor/pa/prebuilt/apk/ParanoidPreferences.apk:system/app/ParanoidPreferences.apk
-#else
+ Source or prebuilt PA-prefs logic
+ifneq ($(PREFS_FROM_SOURCE),true)
+    PRODUCT_COPY_FILES += \
+        vendor/pa/prebuilt/apk/ParanoidPreferences.apk:system/app/ParanoidPreferences.apk
+else
 #    # Build paprefs from sources
 #    PRODUCT_PACKAGES += \
 #        ParanoidPreferences
-#endif
+#endi
 
-# Include ParanoidOTA
-ifneq ($(NO_OTA_BUILD),true)
-    PRODUCT_PACKAGES += \
-        ParanoidOTA
-endif
+# CrystalPA
+PRODUCT_PACKAGES += \
+    Trebuchet \
+    Apollo
 
 # Extra properties
 PRODUCT_PROPERTY_OVERRIDES += \
