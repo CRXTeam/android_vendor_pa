@@ -1,5 +1,5 @@
 # Export rom name
-export VENDOR := CrystalPA
+export VENDOR := pa
 
 # Version info
 ROM_VERSION_MAJOR := 2
