@@ -1,1 +1,2 @@
 add_lunch_combo pa_p700-userdebug
+add_lunch_combo pa_p705-userdebug
