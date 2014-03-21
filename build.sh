@@ -1,6 +1,7 @@
 #!/bin/bash
 
 # Version 2.0.4, Adapted for AOSPA.
+# Used by CrystalPA
 
 # We don't allow scrollback buffer
 echo -e '\0033\0143'
@@ -43,10 +44,10 @@ EXTRAS="$2"
 MAJOR=$(cat $DIR/vendor/pa/vendor.mk | grep 'ROM_VERSION_MAJOR := *' | sed  's/ROM_VERSION_MAJOR := //g')
 MINOR=$(cat $DIR/vendor/pa/vendor.mk | grep 'ROM_VERSION_MINOR := *' | sed  's/ROM_VERSION_MINOR := //g')
 MAINTENANCE=$(cat $DIR/vendor/pa/vendor.mk | grep 'ROM_VERSION_MAINTENANCE := *' | sed  's/ROM_VERSION_MAINTENANCE := //g')
-TAG=$(cat $DIR/vendor/pa/vendor.mk | grep 'ROM_VERSION_TAG := *' | sed  's/ROM_VERSION_TAG := //g')
+CPA=$(cat $DIR/vendor/pa/vendor.mk | grep 'ROM_CRYSTALPA := *' | sed  's/ROM_CRYSTALPA := //g')
 
 if [ -n "$TAG" ]; then
-        VERSION=$MAJOR.$MINOR$MAINTENANCE-$TAG
+        VERSION=$MAJOR.$MINOR$MAINTENANCE
 else
         VERSION=$MAJOR.$MINOR$MAINTENANCE
 fi
@@ -63,7 +64,7 @@ fi
 # Get start time
 res1=$(date +%s.%N)
 
-echo -e "${cya}Building ${bldcya}AOSPA $VERSION for $DEVICE ${txtrst}";
+echo -e "${cya}Building ${bldcya}CRYSTALPA $VERSION for $DEVICE ${txtrst}";
 echo -e "${bldgrn}Start time: $(date) ${txtrst}"
 
 # Decide what command to execute
