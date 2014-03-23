@@ -14,7 +14,7 @@
 
 # Check for target product
 
-ifeq (pa_p705,$(TARGET_PRODUCT))
+ifeq (pa_e610,$(TARGET_PRODUCT))
 
 # OVERLAY_TARGET adds overlay asset source
 OVERLAY_TARGET := pa_hdpi
@@ -28,17 +28,19 @@ $(call inherit-product, vendor/pa/configs/telephony.mk)
 include vendor/pa/main.mk
 
 # Inherit device configuration
-$(call inherit-product, device/lge/p705/full_p705.mk)
+$(call inherit-product, device/lge/e610/full_e610.mk)
 
 PRODUCT_PACKAGES += Trebuchet
 
 # Override AOSP build properties
-PRODUCT_DEVICE := p705
-PRODUCT_NAME := pa_p705
+PRODUCT_DEVICE := e610
+PRODUCT_NAME := pa_e610
 PRODUCT_BRAND := lge
-PRODUCT_MODEL := LG-P705
+PRODUCT_MODEL := LG-e610
 PRODUCT_MANUFACTURER := LGE
 
-PRODUCT_NAME=u0_open_eu BUILD_FINGERPRINT=lge/u0_open_eu/u0:4.1.2/JZO54K/P700_V20h-EUR-XX.1376382946:user/release-keys PRIVATE_BUILD_DESC="u0_open_eu-user 4.1.2 JZO54K P700_V20h-EUR-XX.1376382946 release-keys"
-
+PRODUCT_BUILD_PROP_OVERRIDES += \
+    PRODUCT_NAME=m4_open_eu \
+    BUILD_FINGERPRINT="lge/m4_open_eu/m4:4.1.2/JZO54K/E61020c-EUR-XX.1367460723:user/release-keys" \
+    PRIVATE_BUILD_DESC="m4_open_eu-user 4.1.2 JZO54K E61020c-EUR-XX.1367460723 release-keys"
 endif
