@@ -13,7 +13,7 @@
 # limitations under the License.
 
 # Check for target product
-ifeq (pa_moto_msm8960,$(TARGET_PRODUCT))
+ifeq (pa_huashan,$(TARGET_PRODUCT))
 
 # OVERLAY_TARGET adds overlay asset source
 OVERLAY_TARGET := pa_xhdpi
@@ -28,13 +28,13 @@ $(call inherit-product, vendor/pa/configs/telephony.mk)
 include vendor/pa/main.mk
 
 # Inherit AOSP device configuration
-$(call inherit-product, device/motorola/moto_msm8960/full_moto_msm8960.mk)
+$(call inherit-product, device/sony/huashan/full_huashan.mk)
 
 # Override AOSP build properties
-PRODUCT_DEVICE := moto_msm8960
-PRODUCT_NAME := pa_moto_msm8960
-PRODUCT_BRAND := motorola
-PRODUCT_MODEL := xt926
-PRODUCT_MANUFACTURER := motorola
+PRODUCT_NAME := pa_huashan
+PRODUCT_DEVICE := huashan
+PRODUCT_BRAND := Sony
+PRODUCT_MANUFACTURER := Sony
+PRODUCT_MODEL := C5303
 
 endif
