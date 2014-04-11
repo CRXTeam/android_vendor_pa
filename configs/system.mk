@@ -48,3 +48,9 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PACKAGES += \
     org.cyanogenmod.hardware \
     org.cyanogenmod.hardware.xml
+    
+    
+# OTA
+PRODUCT_PACKAGES += \
+	ParanoidOTA
+	
