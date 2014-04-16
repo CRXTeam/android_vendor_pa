@@ -13,11 +13,11 @@
 # limitations under the License.
 
 
-# Add PA bootanimation based on xxhdpi xhdpi hdpi resolution
+# Add PA bootanimation based on xxhdpi xhdpi hdpi tvdpi resolution
 
 
 # PA XXHDPI Devices
-ifneq ($(filter pa_d800 pa_d801 pa_d802 pa_d803 pa_dlx pa_hlte pa_i9500 pa_jflte pa_ls980 pa_m7 pa_vs980 pa_yuga,$(TARGET_PRODUCT)),)
+ifneq ($(filter pa_d800 pa_d801 pa_d802 pa_d803 pa_dlx pa_hlte pa_honami pa_i9500 pa_jflte pa_ls980 pa_m7 pa_odin pa_vs980 pa_yuga,$(TARGET_PRODUCT)),)
     PRODUCT_COPY_FILES += \
         vendor/pa/prebuilt/bootanimation/1920x1080.zip:system/media/bootanimation.zip
 endif
@@ -32,4 +32,10 @@ endif
 ifneq ($(filter pa_e610 pa_p700 pa_705,$(TARGET_PRODUCT)),)
     PRODUCT_COPY_FILES += \
         vendor/pa/prebuilt/bootanimation/800x480.zip:system/media/bootanimation.zip
+endif
+
+# PA TVDPI Devices
+ifneq ($(filter pa_a510 pa_a700 pa_n5110 pa_n5100,$(TARGET_PRODUCT)),)
+    PRODUCT_COPY_FILES += \
+        vendor/pa/prebuilt/bootanimation/1920x1200.zip:system/media/bootanimation.zip
 endif
