@@ -20,6 +20,9 @@ endif
 ifeq (pa_e610,$(TARGET_PRODUCT))
     PRODUCT_MAKEFILES += $(LOCAL_DIR)/pa_e610.mk
 endif
+ifeq (pa_d605,$(TARGET_PRODUCT))
+    PRODUCT_MAKEFILES += $(LOCAL_DIR)/pa_d605.mk
+endif
 ifeq (pa_a510,$(TARGET_PRODUCT))
     PRODUCT_MAKEFILES += $(LOCAL_DIR)/pa_a510.mk
 endif
