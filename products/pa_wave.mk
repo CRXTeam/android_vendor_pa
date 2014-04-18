@@ -14,13 +14,10 @@
 
 # Check for target product
 
-ifeq (pa_falcon,$(TARGET_PRODUCT))
+ifeq (pa_wave,$(TARGET_PRODUCT))
 
 # OVERLAY_TARGET adds overlay asset source
-OVERLAY_TARGET := pa_xhdpi
-
-# Build paprefs from sources
-PREFS_FROM_SOURCE ?= false
+OVERLAY_TARGET := pa_hdpi
 
 # Inherit telephony common stuff
 $(call inherit-product, vendor/pa/configs/telephony.mk)
@@ -29,16 +26,18 @@ $(call inherit-product, vendor/pa/configs/telephony.mk)
 include vendor/pa/main.mk
 
 # Inherit device configuration
-$(call inherit-product, device/motorola/falcon/full_falcon.mk)
+$(call inherit-product, device/samsung/wave/full_wave.mk)
 
 # Override AOSP build properties
-PRODUCT_NAME := pa_falcon
-PRODUCT_DEVICE := falcon
-PRODUCT_BRAND := motorola
-PRODUCT_MANUFACTURER := motorola
-PRODUCT_MODEL := falcon
+PRODUCT_DEVICE := wave
+PRODUCT_NAME := pa_wave
+PRODUCT_BRAND := samsung
+PRODUCT_MANUFACTURER := samsung
+PRODUCT_MODEL := GT-S8500
 
 # Set build fingerprint / ID / Product Name ect.
-PRODUCT_BUILD_PROP_OVERRIDES += PRODUCT_NAME=falcon TARGET_DEVICE=falcon
+PRODUCT_BUILD_PROP_OVERRIDES += PRODUCT_NAME=GT-I9000 TARGET_DEVICE=GT-I9000 BUILD_FINGERPRINT=samsung/GT-I9000/GT-I9000:2.3.5/GINGERBREAD/XXJVT:user/release-keys PRIVATE_BUILD_DESC="GT-I9000-user 2.3.5 GINGERBREAD XXJVT release-keys"
+
+
 
 endif

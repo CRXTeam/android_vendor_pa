@@ -29,7 +29,7 @@ ifneq ($(filter pa_moto_msm8960 pa_moto_msm8960dt pa_huashan pa_d2lte pa_gee pa_
 endif
 
 # PA HDPI Devices
-ifneq ($(filter pa_e610 pa_p700 pa_705,$(TARGET_PRODUCT)),)
+ifneq ($(filter pa_e610 pa_p700 pa_705 pa_wave,$(TARGET_PRODUCT)),)
     PRODUCT_COPY_FILES += \
         vendor/pa/prebuilt/bootanimation/800x480.zip:system/media/bootanimation.zip
 endif
