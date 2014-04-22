@@ -1,6 +1,7 @@
 add_lunch_combo pa_p700-userdebug
 add_lunch_combo pa_p705-userdebug
 add_lunch_combo pa_e610-userdebug
+add_lunch_combo pa_coconut-userdebug
 add_lunch_combo pa_d605-userdebug
 add_lunch_combo pa_a510-userdebug
 add_lunch_combo pa_a700-userdebug
