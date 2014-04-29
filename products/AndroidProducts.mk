@@ -13,20 +13,20 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 ifeq (cpa_p700,$(TARGET_PRODUCT))
-    PRODUCT_MAKEFILES += $(LOCAL_DIR)/pa_p700.mk
+    PRODUCT_MAKEFILES += $(LOCAL_DIR)/cpa_p700.mk
 endif
 ifeq (cpa_p705,$(TARGET_PRODUCT))
-    PRODUCT_MAKEFILES += $(LOCAL_DIR)/pa_p705.mk
+    PRODUCT_MAKEFILES += $(LOCAL_DIR)/cpa_p705.mk
 endif
 ifeq (cpa_e610,$(TARGET_PRODUCT))
-    PRODUCT_MAKEFILES += $(LOCAL_DIR)/pa_e610.mk
+    PRODUCT_MAKEFILES += $(LOCAL_DIR)/cpa_e610.mk
 endif
 ifeq (cpa_coconut,$(TARGET_PRODUCT))
-    PRODUCT_MAKEFILES += $(LOCAL_DIR)/pa_coconut.mk
+    PRODUCT_MAKEFILES += $(LOCAL_DIR)/cpa_coconut.mk
 endif
 ifeq (cpa_honami,$(TARGET_PRODUCT))
-    PRODUCT_MAKEFILES += $(LOCAL_DIR)/pa_honami.mk
+    PRODUCT_MAKEFILES += $(LOCAL_DIR)/cpa_honami.mk
 endif
 ifeq (cpa_huashan,$(TARGET_PRODUCT))
-    PRODUCT_MAKEFILES += $(LOCAL_DIR)/pa_huashan.mk
+    PRODUCT_MAKEFILES += $(LOCAL_DIR)/cpa_huashan.mk
 endif
