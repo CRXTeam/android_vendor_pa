@@ -22,7 +22,7 @@
         <item>com.android.location.fused</item>
     </string-array>
 
-    <string name="config_mms_user_agent">AOSPA</string>
+    <string name="config_mms_user_agent">CrystalPA</string>
     <string name="config_mms_user_agent_profile_url">http://www.google.com/oha/rdf/ua-profile-kila.xml</string>
 
     <bool name="config_cellBroadcastAppLinks">true</bool>

@@ -1,4 +1,5 @@
-# Copyright (C) 2013 ParanoidAndroid Project
+# Copyright (C) 2014 CrystalPA Project
+# Based on AOSPA
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -44,7 +45,7 @@ PRODUCT_PACKAGES += \
 
 # Extra properties
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.pa.device=$(DEVICE)
+    ro.cpa.device=$(DEVICE)
 
 # Allow override of system DUN
 # 2 = not set, 0 = DUN not required, 1 = DUN required

@@ -1,4 +1,4 @@
-# Copyright (C) 2012 ParanoidAndroid Project
+# Copyright (C) 2014 CrystalPA Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -13,32 +13,28 @@
 # limitations under the License.
 
 # Check for target product
-ifeq (pa_jemlte,$(TARGET_PRODUCT))
+ifeq (cpa_huashan,$(TARGET_PRODUCT))
 
 # OVERLAY_TARGET adds overlay asset source
-OVERLAY_TARGET := pa_tvdpi
+OVERLAY_TARGET := cpa_xhdpi
 
 # Build paprefs from sources
 PREFS_FROM_SOURCE ?= false
 
 # Inherit telephony common stuff
-$(call inherit-product, vendor/pa/configs/telephony.mk)
+$(call inherit-product, vendor/cpa/configs/telephony.mk)
 
-# Include ParanoidAndroid common configuration
-include vendor/pa/main.mk
+# Include CPA common configuration
+include vendor/cpa/main.mk
 
 # Inherit AOSP device configuration
-$(call inherit-product, device/amazon/jemlte/full_jemlte.mk)
+$(call inherit-product, device/sony/huashan/full_huashan.mk)
 
 # Override AOSP build properties
-PRODUCT_NAME := pa_jemlte
-PRODUCT_DEVICE := jemlte
-PRODUCT_RELEASE_NAME := KindleFireHD
-PRODUCT_BRAND := google
-PRODUCT_MODEL := Amazon Jem LTE
-PRODUCT_MANUFACTURER := android
-
-# Set build fingerprint / ID / Product Name ect.
-PRODUCT_BUILD_PROP_OVERRIDES += PRODUCT_NAME=jemlte TARGET_DEVICE=jemlte
+PRODUCT_NAME := cpa_huashan
+PRODUCT_DEVICE := huashan
+PRODUCT_BRAND := Sony
+PRODUCT_MANUFACTURER := Sony
+PRODUCT_MODEL := C5303
 
 endif

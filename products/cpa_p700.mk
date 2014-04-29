@@ -1,4 +1,4 @@
-# Copyright (C) 2013 ParanoidAndroid Project
+# Copyright (C) 2014 CrystalPA Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -14,28 +14,35 @@
 
 # Check for target product
 
-ifeq (pa_nozomi,$(TARGET_PRODUCT))
+ifeq (cpa_p700,$(TARGET_PRODUCT))
 
 # OVERLAY_TARGET adds overlay asset source
-OVERLAY_TARGET := pa_xhdpi
+OVERLAY_TARGET := cpa_hdpi
 
 PREFS_FROM_SOURCE ?= false
 
 # Inherit telephony common stuff
-$(call inherit-product, vendor/pa/configs/telephony.mk)
+$(call inherit-product, vendor/cpa/configs/telephony.mk)
 
-# Include AOSPA common configuration
-include vendor/pa/main.mk
+# Include CPA common configuration
+include vendor/cpa/main.mk
 
 # Inherit device configuration
-$(call inherit-product, device/sony/nozomi/full_nozomi.mk)
+$(call inherit-product, device/lge/p700/full_p700.mk)
 
 # Override AOSP build properties
-PRODUCT_NAME := pa_nozomi
-PRODUCT_DEVICE := nozomi
-PRODUCT_BRAND := Sony
-PRODUCT_MANUFACTURER := Sony
-PRODUCT_MODEL := Xperia S
-PRODUCT_BUILD_PROP_OVERRIDES += PRODUCT_NAME=LT26i_1257-5499 PRODUCT_DEVICE=nozomi BUILD_FINGERPRINT=SEMC/LT26i_1257-5499/LT26i:4.0.4/6.1.A.2.50/zfd_zw:user/release-keys PRIVATE_BUILD_DESC="LT26i-user 4.0.4 6.1.A.2.50 zfd_zw test-keys"
+PRODUCT_DEVICE := p700
+PRODUCT_NAME := cpa_p700
+PRODUCT_BRAND := lge
+PRODUCT_MODEL := LG-P700
+PRODUCT_MANUFACTURER := LGE
 
+# override
+PRODUCT_BUILD_PROP_OVERRIDES += \
+    BUILD_NUMBER=144808 \
+    PRODUCT_NAME=p700 \
+    TARGET_BUILD_TYPE=user \
+    BUILD_VERSION_TAGS=release-keys \
+    PRIVATE_BUILD_DESC="p700-user 4.4.2 KVT49L 144808 release-keys" \
+    BUILD_FINGERPRINT="lge/p700/4.4.2/KVT49L/144808:user/release-keys"
 endif

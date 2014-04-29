@@ -1,4 +1,4 @@
-# Copyright (C) 2014 ParanoidAndroid Project
+# Copyright (C) 2014 CrystalPA Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -13,36 +13,36 @@
 # limitations under the License.
 
 # Check for target product
-ifeq (pa_dlx,$(TARGET_PRODUCT))
 
-# Define PA bootanimation size
-PARANOID_BOOTANIMATION_NAME := XHDPI
+ifeq (cpa_p705,$(TARGET_PRODUCT))
 
 # OVERLAY_TARGET adds overlay asset source
-OVERLAY_TARGET := pa_xhdpi
+OVERLAY_TARGET := cpa_hdpi
 
-# Build paprefs from sources
 PREFS_FROM_SOURCE ?= false
 
 # Inherit telephony common stuff
-$(call inherit-product, vendor/pa/configs/telephony.mk)
+$(call inherit-product, vendor/cpa/configs/telephony.mk)
 
-# Include AOSPA common configuration
-include vendor/pa/main.mk
+# Include CPA common configuration
+include vendor/cpa/main.mk
 
 # Inherit device configuration
-$(call inherit-product, device/htc/dlx/full_dlx.mk)
+$(call inherit-product, device/lge/p705/full_p705.mk)
 
 # Override AOSP build properties
-PRODUCT_DEVICE := dlx
-PRODUCT_NAME := pa_dlx
-PRODUCT_BRAND := Verizon
-PRODUCT_MODEL := HTC6435LVW
-PRODUCT_MANUFACTURER := HTC
-PRODUCT_BUILD_PROP_OVERRIDES += \
-    PRODUCT_NAME=dlx \
-    BUILD_ID=JDQ39 \
-    BUILD_FINGERPRINT=htc/verizon_wwe/dlx:4.2.2/JDQ39/277065.4:user/release-keys \
-    PRIVATE_BUILD_DESC="3.06.605.4 CL277065 release-keys"
+PRODUCT_DEVICE := p705
+PRODUCT_NAME := cpa_p705
+PRODUCT_BRAND := lge
+PRODUCT_MODEL := LG-P705
+PRODUCT_MANUFACTURER := LGE
 
+# override
+PRODUCT_BUILD_PROP_OVERRIDES += \
+    BUILD_NUMBER=144808 \
+    PRODUCT_NAME=p705 \
+    TARGET_BUILD_TYPE=user \
+    BUILD_VERSION_TAGS=release-keys \
+    PRIVATE_BUILD_DESC="p705-user 4.4.2 KVT49L 144808 release-keys" \
+    BUILD_FINGERPRINT="lge/p705/4.4.2/KVT49L/144808:user/release-keys"
 endif

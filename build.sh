@@ -101,8 +101,8 @@ fi
 if [ -n "${INTERACTIVE}" ]; then
         echo -e "${bldblu}Dropping to interactive shell${txtrst}"
         echo -en "${bldblu}Remeber to lunch you device:"
-        if [ "${VENDOR}" == "pa" ]; then
-                echo -e "[${bldgrn}lunch pa_$DEVICE-userdebug${bldblu}]${txtrst}"
+        if [ "${VENDOR}" == "cpa" ]; then
+                echo -e "[${bldgrn}lunch cpa_$DEVICE-userdebug${bldblu}]${txtrst}"
         else
                 echo -e "[${bldgrn}lunch full_$DEVICE-userdebug${bldblu}]${txtrst}"
         fi
@@ -117,7 +117,7 @@ else
         # lunch/brunch device
         echo -e "${bldblu}Lunching device [$DEVICE] ${cya}(Includes dependencies sync)${txtrst}"
         export PREFS_FROM_SOURCE
-        lunch "pa_$DEVICE-userdebug";
+        lunch "cpa_$DEVICE-userdebug";
 
         echo -e "${bldblu}Starting compilation${txtrst}"
         mka bacon

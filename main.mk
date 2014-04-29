@@ -1,4 +1,5 @@
-# Copyright (C) 2013 ParanoidAndroid Project
+# Copyright (C) 2014 CrystalPA Project
+# Based on AOSPA
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -14,11 +15,11 @@
 
 
 
-include vendor/pa/vendor.mk
-include vendor/pa/configs/aosp_fixes.mk
-include vendor/pa/configs/system.mk
-include vendor/pa/configs/pa_overrides.mk
-include vendor/pa/configs/bootanimation.mk
-include vendor/pa/configs/version.mk
-include vendor/pa/configs/cpa.mk
+include vendor/cpa/vendor.mk
+include vendor/cpa/configs/aosp_fixes.mk
+include vendor/cpa/configs/system.mk
+include vendor/cpa/configs/pa_overrides.mk
+include vendor/cpa/configs/bootanimation.mk
+include vendor/cpa/configs/version.mk
+include vendor/cpa/configs/cpa.mk
 

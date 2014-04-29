@@ -1,4 +1,3 @@
-# Copyright (C) 2013 ParanoidAndroid Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -13,29 +12,30 @@
 # limitations under the License.
 
 # Check for target product
-
-ifeq (pa_hikari,$(TARGET_PRODUCT))
+ifeq (cpa_coconut,$(TARGET_PRODUCT))
 
 # OVERLAY_TARGET adds overlay asset source
-OVERLAY_TARGET := pa_xhdpi
-
-PREFS_FROM_SOURCE ?= false
+OVERLAY_TARGET := cpa_mdpi
 
 # Inherit telephony common stuff
-$(call inherit-product, vendor/pa/configs/telephony.mk)
+$(call inherit-product, vendor/cpa/configs/telephony.mk)
 
-# Include AOSPA common configuration
-include vendor/pa/main.mk
+# Include CPA common configuration
+include vendor/cpa/main.mk
 
 # Inherit device configuration
-$(call inherit-product, device/sony/hikari/full_hikari.mk)
+$(call inherit-product, device/semc/coconut/full_coconut.mk)
 
 # Override AOSP build properties
-PRODUCT_NAME := pa_hikari
-PRODUCT_DEVICE := hikari
-PRODUCT_BRAND := Sony
-PRODUCT_MANUFACTURER := Sony
-PRODUCT_MODEL := Xperia Acro S
-PRODUCT_BUILD_PROP_OVERRIDES += PRODUCT_NAME=LT26w_1266-3204 PRODUCT_DEVICE=hikari BUILD_FINGERPRINT=SEMC/LT26w_1266-3204/LT26w:4.0.4/6.1.A.2.50/zfd_zw:user/release-keys PRIVATE_BUILD_DESC="LT26w-user 4.0.4 6.1.A.2.50 zfd_zw test-keys"
+PRODUCT_NAME := cpa_coconut
+PRODUCT_DEVICE := coconut
+PRODUCT_BRAND := SEMC
+PRODUCT_MANUFACTURER := Sony Ericsson
+PRODUCT_MODEL := WT19i
 
+PRODUCT_BUILD_PROP_OVERRIDES += \
+    PRODUCT_NAME=WT19i \
+    PRODUCT_DEVICE=WT19i \
+    BUILD_FINGERPRINT="SEMC/WT19i_1254-2184/WT19i:4.0.4/4.1.B.0.587/tL1_3w:user/release-keys" \
+    PRIVATE_BUILD_DESC="WT19i-user 4.0.4 4.1.B.0.587 tL1_3w test-keys"
 endif

@@ -1,4 +1,4 @@
-# Copyright (C) 2013 ParanoidAndroid Project
+# Copyright (C) 2014 CrystalPA Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -13,33 +13,29 @@
 # limitations under the License.
 
 # Check for target product
-
-ifeq (pa_m7vzw,$(TARGET_PRODUCT))
+ifeq (cpa_honami,$(TARGET_PRODUCT))
 
 # OVERLAY_TARGET adds overlay asset source
-OVERLAY_TARGET := pa_xhdpi
+OVERLAY_TARGET := cpa_xhdpi
 
 # Build paprefs from sources
 PREFS_FROM_SOURCE ?= false
 
 # Inherit telephony common stuff
-$(call inherit-product, vendor/pa/configs/telephony.mk)
+$(call inherit-product, vendor/cpa/configs/telephony.mk)
 
-# Include AOSPA common configuration
-include vendor/pa/main.mk
+# Include CPA common configuration
+include vendor/cpa/main.mk
 
 # Inherit device configuration
-$(call inherit-product, device/htc/m7vzw/full_m7vzw.mk)
+$(call inherit-product, device/sony/honami/full_honami.mk)
 
-# Device identifier. This must come after all inclusions
-PRODUCT_DEVICE := m7vzw
-PRODUCT_NAME := pa_m7vzw
-PRODUCT_BRAND := HTC
-PRODUCT_MODEL := One
-PRODUCT_MANUFACTURER := HTC
-
-PRODUCT_BUILD_PROP_OVERRIDES += PRODUCT_NAME=m7vzw BUILD_ID=KOT49H BUILD_FINGERPRINT="VERIZON/HTCOneVZW/m7wlv:4.4.2/KOT49H/303687.4:user/release-keys" PRIVATE_BUILD_DESC="4.06.651.4 CL303687 release-keys"
-
-PRODUCT_GMS_CLIENTID_BASE := android-verizon
-
+# Override AOSP build properties
+PRODUCT_NAME := cpa_honami
+PRODUCT_DEVICE := honami
+PRODUCT_BRAND := sony
+PRODUCT_MANUFACTURER := Sony
+PRODUCT_MODEL := Xperia Z1
+PRODUCT_BUILD_PROP_OVERRIDES += PRODUCT_NAME=C6903 TARGET_DEVICE=honami BUILD_FINGERPRINT=Sony/C6903/C6903:4.3/14.2.A.0.290/eng.hudsonslave:user/release-keys PRIVATE_BUILD_DESC="C6903-user 4.3 RHINE-1.1-131125-1201 eng.hudsonslave test-keys"
+    
 endif
