@@ -27,6 +27,8 @@ $(call inherit-product, vendor/cpa/configs/telephony.mk)
 # Include CPA common configuration
 include vendor/cpa/main.mk
 
+ROM_VERSION_TAG := OFFICIAL
+
 # Inherit AOSP device configuration
 $(call inherit-product, device/sony/huashan/full_huashan.mk)
 

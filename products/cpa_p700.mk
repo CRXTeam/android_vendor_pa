@@ -21,6 +21,8 @@ OVERLAY_TARGET := cpa_hdpi
 
 PREFS_FROM_SOURCE ?= false
 
+ROM_VERSION_TAG := OFFICIAL
+
 # Inherit telephony common stuff
 $(call inherit-product, vendor/cpa/configs/telephony.mk)
 

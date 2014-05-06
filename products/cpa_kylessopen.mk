@@ -27,6 +27,8 @@ $(call inherit-product, vendor/cpa/configs/telephony.mk)
 # Include CPA common configuration
 include vendor/cpa/main.mk
 
+ROM_VERSION_TAG := OFFICIAL
+
 # Inherit device configuration
 $(call inherit-product, device/samsung/kylessopen/kylessopen.mk)
 
