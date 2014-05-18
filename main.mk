@@ -23,3 +23,5 @@ include vendor/cpa/configs/bootanimation.mk
 include vendor/cpa/configs/version.mk
 include vendor/cpa/configs/cpa.mk
 include vendor/cpa/configs/telephony.mk
+# T-Mobile theme engine
+include vendor/cpa/configs/themes_common.mk
