@@ -21,5 +21,5 @@ include vendor/cpa/configs/pa_overrides.mk
 include vendor/cpa/configs/bootanimation.mk
 include vendor/cpa/configs/version.mk
 include vendor/cpa/configs/cpa.mk
-include vendor/cpa/configs/telephony.mk
 include vendor/cpa/configs/themes_common.mk
+include vendor/pa/configs/legacy_extras.mk
