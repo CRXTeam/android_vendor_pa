@@ -14,7 +14,7 @@
 
 # Check for target product
 
-ifeq (cpa_p700,$(TARGET_PRODUCT))
+ifeq (cpa_p705,$(TARGET_PRODUCT))
 
 #HAVE NFC?
 HAVE_NFC := false
@@ -33,7 +33,7 @@ $(call inherit-product, vendor/cpa/configs/telephony.mk)
 include vendor/cpa/main.mk
 
 # Inherit device configuration
-$(call inherit-product, device/lge/p700/full_p700.mk)
+$(call inherit-product, device/lge/p705/full_p705.mk)
 
 # Override AOSP build properties
 PRODUCT_DEVICE := p705
@@ -48,6 +48,6 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
     PRODUCT_NAME=p700 \
     TARGET_BUILD_TYPE=user \
     BUILD_VERSION_TAGS=release-keys \
-    PRIVATE_BUILD_DESC="p700-user 4.4.2 KVT49L 144808 release-keys" \
-    BUILD_FINGERPRINT="lge/p700/4.4.2/KVT49L/144808:user/release-keys"
+    PRIVATE_BUILD_DESC="p705-user 4.4.2 KVT49L 144808 release-keys" \
+    BUILD_FINGERPRINT="lge/p705/4.4.2/KVT49L/144808:user/release-keys"
 endif
