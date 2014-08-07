@@ -14,12 +14,17 @@
 
 # Check for target product
 
-ifeq (cpa_p705,$(TARGET_PRODUCT))
+ifeq (cpa_p700,$(TARGET_PRODUCT))
+
+#HAVE NFC?
+HAVE_NFC := false
 
 # OVERLAY_TARGET adds overlay asset source
 OVERLAY_TARGET := cpa_hdpi
 
 PREFS_FROM_SOURCE ?= false
+
+ROM_VERSION_TAG := OFFICIAL
 
 # Inherit telephony common stuff
 $(call inherit-product, vendor/cpa/configs/telephony.mk)
@@ -27,10 +32,8 @@ $(call inherit-product, vendor/cpa/configs/telephony.mk)
 # Include CPA common configuration
 include vendor/cpa/main.mk
 
-ROM_VERSION_TAG := OFFICIAL
-
 # Inherit device configuration
-$(call inherit-product, device/lge/p705/full_p705.mk)
+$(call inherit-product, device/lge/p700/full_p700.mk)
 
 # Override AOSP build properties
 PRODUCT_DEVICE := p705
@@ -42,9 +45,9 @@ PRODUCT_MANUFACTURER := LGE
 # override
 PRODUCT_BUILD_PROP_OVERRIDES += \
     BUILD_NUMBER=144808 \
-    PRODUCT_NAME=p705 \
+    PRODUCT_NAME=p700 \
     TARGET_BUILD_TYPE=user \
     BUILD_VERSION_TAGS=release-keys \
-    PRIVATE_BUILD_DESC="p705-user 4.4.2 KVT49L 144808 release-keys" \
-    BUILD_FINGERPRINT="lge/p705/4.4.2/KVT49L/144808:user/release-keys"
+    PRIVATE_BUILD_DESC="p700-user 4.4.2 KVT49L 144808 release-keys" \
+    BUILD_FINGERPRINT="lge/p700/4.4.2/KVT49L/144808:user/release-keys"
 endif

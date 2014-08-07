@@ -16,6 +16,9 @@
 
 ifeq (cpa_p700,$(TARGET_PRODUCT))
 
+#HAVE NFC?
+HAVE_NFC := true
+
 # OVERLAY_TARGET adds overlay asset source
 OVERLAY_TARGET := cpa_hdpi
 
