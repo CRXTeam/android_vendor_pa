@@ -12,22 +12,25 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-# Check for target product
+# Check for target product'
+
 ifeq (cpa_huashan,$(TARGET_PRODUCT))
+
+#HAVE NFC?
+HAVE_NFC := true
 
 # OVERLAY_TARGET adds overlay asset source
 OVERLAY_TARGET := cpa_xhdpi
 
-# Build paprefs from sources
 PREFS_FROM_SOURCE ?= false
+
+ROM_VERSION_TAG := OFFICIAL
 
 # Inherit telephony common stuff
 $(call inherit-product, vendor/cpa/configs/telephony.mk)
 
 # Include CPA common configuration
 include vendor/cpa/main.mk
-
-ROM_VERSION_TAG := OFFICIAL
 
 # Inherit AOSP device configuration
 $(call inherit-product, device/sony/huashan/full_huashan.mk)
@@ -39,4 +42,6 @@ PRODUCT_BRAND := Sony
 PRODUCT_MANUFACTURER := Sony
 PRODUCT_MODEL := C5303
 
+# Set build fingerprint / ID / Product Name ect.
+PRODUCT_BUILD_PROP_OVERRIDES += PRODUCT_NAME=C5303 TARGET_DEVICE=huashan
 endif
