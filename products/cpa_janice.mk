@@ -32,6 +32,31 @@ $(call inherit-product, vendor/cpa/configs/telephony.mk)
 # Include CPA common configuration
 include vendor/cpa/main.mk
 
+# Override AOSP build properties
+PRODUCT_NAME := cpa_janice
+PRODUCT_DEVICE := janice
+PRODUCT_BRAND := samsung
+PRODUCT_MANUFACTURER := samsung
+PRODUCT_MODEL := GT-I9070
+
+## Webkit
+PRODUCT_PACKAGES += \
+    libwebcore	
+
+# (classic webview provider)
+PRODUCT_PROPERTY_OVERRIDES += \
+    persist.webview.provider=classic
+
+ENABLE_WEBGL := true
+PRODUCT_PREBUILT_WEBVIEWCHROMIUM := yes
+TARGET_ARCH_LOWMEM := true
+JS_ENGINE	:= v8
+HTTP	:= chrome
+WITH_JIT	:= true
+ENABLE_JSC_JIT	:= true
+TARGET_WEBKIT_USE_MORE_MEMORY	:= true
+TARGET_FORCE_CPU_UPLOAD	:= true
+
 # Inherit device configuration
 $(call inherit-product, device/samsung/janice/full_janice.mk)
 
