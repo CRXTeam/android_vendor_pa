@@ -32,9 +32,10 @@ $(call inherit-product, device/lge/mako/full_mako.mk)
 
 # Override AOSP build properties
 PRODUCT_NAME := cpa_mako
+PRODUCT_DEVICE := mako
 PRODUCT_BRAND := Google
-PRODUCT_MODEL := Nexus 4
 PRODUCT_MANUFACTURER := LGE
+PRODUCT_MODEL := Nexus 4
 PRODUCT_BUILD_PROP_OVERRIDES += PRODUCT_NAME=occam BUILD_FINGERPRINT="google/occam/mako:4.4.4/KTU84P/1227136:user/release-keys" PRIVATE_BUILD_DESC="occam-user 4.4.4 KTU84P 1227136 release-keys"
 
 endif
