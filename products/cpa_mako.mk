@@ -22,7 +22,10 @@ OVERLAY_TARGET := cpa_xhdpi
 # Build paprefs from sources
 PREFS_FROM_SOURCE ?= false
 
-# Include ParanoidAndroid common configuration
+# Inherit telephony common stuff
+$(call inherit-product, vendor/cpa/configs/telephony.mk)
+
+# Include CPA common configuration
 include vendor/cpa/main.mk
 
 ROM_VERSION_TAG := OFFICIAL
