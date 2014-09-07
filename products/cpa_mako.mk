@@ -14,7 +14,7 @@
 
 # Check for target product
 
-ifeq (pa_mako,$(TARGET_PRODUCT))
+ifeq (cpa_mako,$(TARGET_PRODUCT))
 
 # OVERLAY_TARGET adds overlay asset source
 OVERLAY_TARGET := cpa_xhdpi
