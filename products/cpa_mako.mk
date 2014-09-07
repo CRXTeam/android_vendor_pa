@@ -16,19 +16,21 @@
 
 ifeq (cpa_mako,$(TARGET_PRODUCT))
 
+#HAVE NFC?
+HAVE_NFC := true
+
 # OVERLAY_TARGET adds overlay asset source
 OVERLAY_TARGET := cpa_xhdpi
 
-# Build paprefs from sources
 PREFS_FROM_SOURCE ?= false
+
+ROM_VERSION_TAG := OFFICIAL
 
 # Inherit telephony common stuff
 $(call inherit-product, vendor/cpa/configs/telephony.mk)
 
 # Include CPA common configuration
 include vendor/cpa/main.mk
-
-ROM_VERSION_TAG := OFFICIAL
 
 # Inherit AOSP device configuration
 $(call inherit-product, device/lge/mako/full_mako.mk)
