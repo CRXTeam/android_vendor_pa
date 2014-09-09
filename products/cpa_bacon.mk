@@ -35,6 +35,9 @@ include vendor/cpa/main.mk
 # Inherit device configuration
 $(call inherit-product, device/oneplus/bacon/full_bacon.mk)
 
+# Signed bacon gets a special boot animation because it's special.
+PRODUCT_BOOTANIMATION := device/oneplus/bacon/bootanimation.zip
+
 # Override AOSP build properties
 PRODUCT_NAME := cpa_bacon
 PRODUCT_DEVICE := bacon
