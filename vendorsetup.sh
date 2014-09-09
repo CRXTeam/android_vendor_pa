@@ -10,3 +10,4 @@ add_lunch_combo cpa_huashan-userdebug
 add_lunch_combo cpa_kylessopen-userdebug
 add_lunch_combo cpa_mako-userdebug
 add_lunch_combo cpa_p760-userdebug
+add_lunch_combo cpa_bacon-userdebug
