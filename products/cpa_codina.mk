@@ -42,13 +42,6 @@ PRODUCT_MODEL := GT-I8160
 # Inherit device configuration
 $(call inherit-product, device/samsung/codina/full_codina.mk)
 
-# Override AOSP build properties
-PRODUCT_NAME := cpa_codina
-PRODUCT_DEVICE := codina
-PRODUCT_BRAND := samsung
-PRODUCT_MANUFACTURER := samsung
-PRODUCT_MODEL := GT-I8160
-
 # Set build fingerprint / ID / Product Name ect.
 PRODUCT_BUILD_PROP_OVERRIDES += PRODUCT_NAME=GT-I8160 TARGET_DEVICE=codina
 endif
