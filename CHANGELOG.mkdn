@@ -8,10 +8,22 @@ CHANGELOG (notable new features)
 ### 7.00
 * Latest AOSPA
 * Added On-To-Go
+* Fully support Polish language
+* New Device: OnePlus One (bacon)
+* Added Easter Egg
+* Added lockscreen notification
+* Added battery around lockscreen ring
+* Deleted Active Display (better peek)
+* Added Wakelock Blocker
+* Added vibrator_intensity
+* Fixed CPA color recents
+* Added CPUFreqTile
+* Added Pocket Mode
 * Added new official wallpapers
-* P760: New bluetooth drivers;
-* P760: Fixed deep sleep;
-* P760: New NFC files;
+* huashan: changed DPI to default
+* P760: New bluetooth drivers
+* P760: Fixed deep sleep
+* P760: New NFC files
 * P700/P705/E610: Bring back to THLG sources
 * P700/P705: - enable SELinux
 
