@@ -1,9 +1,10 @@
 # CrystalPA
 PRODUCT_PACKAGES += \
     OmniSwitch \
-    CMFileManager \
-    CPAWallpapers
+    CMFileManager
 
-# ViPER
+# Prebuild apps
 PRODUCT_COPY_FILES += \
-    vendor/cpa/prebuilt/apk/ViPER4Android_FX_A4.x.apk:system/app/ViPER4Android_FX_A4.x.apk
+    vendor/cpa/prebuilt/apk/ViPER4Android_FX_A4.x.apk:system/app/ViPER4Android_FX_A4.x.apk \
+    vendor/cpa/prebuilt/apk/wallpapers.apk:system/app/wallpapers.apk \
+    vendor/cpa/CHANGELOG.mkdn:system/etc/CHANGELOG.mkdn
