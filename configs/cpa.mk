@@ -1,7 +1,8 @@
 # CrystalPA
 PRODUCT_PACKAGES += \
     OmniSwitch \
-	CMFileManager
+    CMFileManager \
+    CPAWallpapers
 
 # ViPER
 PRODUCT_COPY_FILES += \
