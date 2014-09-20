@@ -1,0 +1,135 @@
+CrystalPA
+===============
+
+Visit http://github.com/CRXTeam for full source and git access.
+
+CHANGELOG (notable new features)
+---------
+### 7.00
+* Latest AOSPA
+* Added On-To-Go
+* Added new official wallpapers
+* P760: New bluetooth drivers;
+* P760: Fixed deep sleep;
+* P760: New NFC files;
+* P700/P705/E610: Bring back to THLG sources
+* P700/P705: - enable SELinux
+
+### 6.50
+* Latest AOSPA
+* Updated MMS, DeskClock, InCallUI, TelephonyProvider, Bluetooth and Dialer
+* Improved translations
+* Updated ActivityManager
+* New Device: LG Optimus L9 (P760)
+* huashan: changed DPI to 280
+* huashan/janice: removed Classic WebView
+* huashan: fixup buggy mic (added a missing flag)
+* huashan: fixed problem with apps FC, when connected to internet
+* sony_common: Build setup_fs
+* janice: Fixed Torch;
+* janice: New kernel;
+
+### 6.00
+* Latest AOSPA
+* Added Toast Animations
+* Some changes in TRDC - The Real Dark Crystal
+* Changed background of CPA Recent Apps
+* Fixed listview Animations
+* A few new thinks in Settings
+* Added new navbar settings
+* New Device: Samsung Galaxy S Advance (janice)
+* janice: added SmartassH3 to kernel
+* janice: changed DPI to 200
+* janice/huashan: added Classic WebView
+
+### 5.00
+* Common: Android 4.4.4 (Google)
+* Latest AOSPA
+* Fixed Theme Engine
+* Added PEEK
+* huashan: latest Android 4.4 blobs
+* Much more, but we forgot;
+
+### 4.40
+* Latest AOSPA
+* Removed theme engine, which was replaced with the theme chooser, which also doesn't work too (it will soon be repair)
+* Removed PEEK (We have a better active display)
+* Fixed a bug with the rotation of the screen
+* New launcher (Edited launcher3 from Google)
+* Fixed dialer
+* Improved floating windows
+* Added Split view
+* huashan: mobile network working!
+* qcom-common: Adreno driver upgrades
+* Added ViPER4Android
+
+### 4.30
+* Latest AOSPA
+* Added Theme Engine
+* huashan: Added Offline Charging
+* huashan: Fixed MPDecision
+
+### 4.20
+* Latest AOSPA
+* Added mobile network settings
+* Added animation screen off
+* Added shortcuts on lockscreen
+* Fixed Accessibility settings
+* Enabling floating windows with recent apps
+* P700: fixed the GPU drivers
+
+### 4.10
+* Latest AOSPA
+* CAF
+* Some changes in the code
+
+### 4.00
+* Latest AOSPA
+* New Device: Sony Xperia SP (huashan)
+* Added Dark Dialer
+* Added Active Display
+* Improved translation
+* Added lockscreen
+* Added CPA Recents Apps
+* Added Floating Windows
+* A lot of code changes
+* Several fixes in appearance
+* huashan: merge Sony 4.3
+* P700/P705/E610: The new configuration of the GPU and CPU
+* P700/P705/E610: Drivers Adreno 200 from V20
+
+### 3.00
+* Latest AOSPA
+* Added OmniSwitch i SlimRecent
+* Possible change with OmniSwitch i SlimRecent
+* Added ListView Animation;
+* Added PIE
+* Removed HALO
+* Few other changes inside sources
+* New settings in CrystalPA - better look
+* Fixed bug localization settings
+
+### 2.0
+* Latest AOSPA
+* Added Tab Settings
+* Added The Real Dark Crystal
+* Many changes in system design - kitkat
+* Added Launcher settings
+* P700: Updated kernel
+* P700: KGSL 2.7 (from THLG)
+* Added undervolt
+* Added SWAP
+
+### 1.0
+* Latest AOSPA
+* P700: LowRam
+* Added HALO
+* New animation qs
+* Added BatteryBar
+* Added settings for clock and date
+* Added option for enable navbar
+* Added information about partition
+* Added option for enable high gfx
+* Added option for disable bootanimation
+* P700: Changed DPI to 200
+* Added information about processor
