@@ -21,9 +21,6 @@ CHANGELOG (notable new features)
 * Added Pocket Mode
 * Added new official wallpapers
 * huashan: changed DPI to default
-* P760: New bluetooth drivers
-* P760: Fixed deep sleep
-* P760: New NFC files
 * P700/P705/E610: Bring back to THLG sources
 * P700/P705: - enable SELinux
 
@@ -40,6 +37,9 @@ CHANGELOG (notable new features)
 * sony_common: Build setup_fs
 * janice: Fixed Torch;
 * janice: New kernel;
+* P760: New bluetooth drivers
+* P760: Fixed deep sleep
+* P760: New NFC files
 
 ### 6.00
 * Latest AOSPA
