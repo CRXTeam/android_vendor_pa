@@ -26,6 +26,7 @@ CHANGELOG (notable new features)
 * huashan: added setup_fs service for Userdata (init)
 * P700/P705/E610: Bring back to THLG sources
 * P700/P705: - enable SELinux
+* P760: Enable OC
 
 ### 6.50
 * Latest AOSPA
