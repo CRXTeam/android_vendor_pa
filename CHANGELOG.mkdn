@@ -7,20 +7,23 @@ CHANGELOG (notable new features)
 ---------
 ### 7.00
 * Latest AOSPA
-* Added On-To-Go
+* Added On-The-Go
+* Added new launcher (Nova Launcher)
 * Fully support Polish language
-* New Device: OnePlus One (bacon)
+* New Devices: OnePlus One (bacon), Samsung Galaxy Ace 2 (codina)
+* Fixed Dark Dialer
+* Fixed resize the navigation bar
 * Added Easter Egg
 * Added lockscreen notification
 * Added battery around lockscreen ring
 * Deleted Active Display (better peek)
 * Added Wakelock Blocker
-* Added vibrator_intensity
+* Added Vibrator Intensity
 * Fixed CPA color recents
 * Added CPUFreqTile
 * Added Pocket Mode
 * Added new official wallpapers
-* huashan: changed DPI to default
+* huashan: added setup_fs service for Userdata (init)
 * P700/P705/E610: Bring back to THLG sources
 * P700/P705: - enable SELinux
 
