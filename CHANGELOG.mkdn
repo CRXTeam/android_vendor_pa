@@ -9,7 +9,7 @@ CHANGELOG (notable new features)
 * Latest AOSPA
 * Added On-The-Go
 * Added new launcher (Nova Launcher)
-* Fully support Polish language
+* Improved Polish translation
 * New Devices: OnePlus One (bacon), Samsung Galaxy Ace 2 (codina)
 * Fixed Dark Dialer
 * Fixed resize the navigation bar
