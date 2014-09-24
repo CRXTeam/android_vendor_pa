@@ -47,5 +47,5 @@ PRODUCT_PROPERTY_OVERRIDES += \
     
 # OTA
 PRODUCT_PACKAGES += \
-	CrystalOTA
+	ParanoidOTA
 	
