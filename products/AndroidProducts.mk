@@ -39,6 +39,9 @@ endif
 ifeq (cpa_d605,$(TARGET_PRODUCT))
     PRODUCT_MAKEFILES += $(LOCAL_DIR)/cpa_d605.mk
 endif
+ifeq (cpa_d620,$(TARGET_PRODUCT))
+    PRODUCT_MAKEFILES += $(LOCAL_DIR)/cpa_d620.mk
+endif
 ifeq (cpa_kylessopen,$(TARGET_PRODUCT))
     PRODUCT_MAKEFILES += $(LOCAL_DIR)/cpa_kylessopen.mk
 endif

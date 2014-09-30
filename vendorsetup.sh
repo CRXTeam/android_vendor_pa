@@ -3,6 +3,7 @@ add_lunch_combo cpa_janice-userdebug
 add_lunch_combo cpa_p700-userdebug
 add_lunch_combo cpa_p705-userdebug
 add_lunch_combo cpa_d605-userdebug
+add_lunch_combo cpa_d620-userdebug
 add_lunch_combo cpa_e610-userdebug
 add_lunch_combo cpa_coconut-userdebug
 add_lunch_combo cpa_honami-userdebug
