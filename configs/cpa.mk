@@ -2,7 +2,8 @@
 PRODUCT_PACKAGES += \
     OmniSwitch \
     CMFileManager \
-    CPAWallpapers
+    CPAWallpapers \
+    PerformanceControl
 
 # ViPER
 PRODUCT_COPY_FILES += \
