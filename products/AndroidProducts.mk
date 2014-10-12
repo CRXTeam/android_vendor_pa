@@ -54,3 +54,6 @@ endif
 ifeq (cpa_bacon,$(TARGET_PRODUCT))
     PRODUCT_MAKEFILES += $(LOCAL_DIR)/cpa_bacon.mk
 endif
+ifeq (cpa_eagle,$(TARGET_PRODUCT))
+    PRODUCT_MAKEFILES += $(LOCAL_DIR)/cpa_eagle.mk
+endif
