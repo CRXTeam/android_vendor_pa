@@ -13,3 +13,5 @@ add_lunch_combo cpa_mako-userdebug
 add_lunch_combo cpa_p760-userdebug
 add_lunch_combo cpa_bacon-userdebug
 add_lunch_combo cpa_eagle-userdebug
+add_lunch_combo cpa_w7-userdebug
+add_lunch_combo cpa_w7-user

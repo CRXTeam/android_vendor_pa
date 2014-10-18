@@ -57,3 +57,6 @@ endif
 ifeq (cpa_eagle,$(TARGET_PRODUCT))
     PRODUCT_MAKEFILES += $(LOCAL_DIR)/cpa_eagle.mk
 endif
+ifeq (cpa_w7,$(TARGET_PRODUCT))
+    PRODUCT_MAKEFILES += $(LOCAL_DIR)/cpa_w7.mk
+endif
