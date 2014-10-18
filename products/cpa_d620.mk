@@ -28,7 +28,7 @@ $(call inherit-product, vendor/cpa/configs/telephony.mk)
 include vendor/cpa/main.mk
 
 # Inherit device configuration
-$(call inherit-product, device/lge/d620/d620.mk)
+$(call inherit-product, device/lge/d620/full_d620.mk)
 
 # Override AOSP build properties
 PRODUCT_DEVICE := d620
