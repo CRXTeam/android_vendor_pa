@@ -17,7 +17,7 @@
 include vendor/cpa/vendor.mk
 include vendor/cpa/configs/aosp_fixes.mk
 include vendor/cpa/configs/system.mk
-include vendor/cpa/configs/pa_overrides.mk
+include vendor/cpa/configs/cpa_overrides.mk
 include vendor/cpa/configs/bootanimation.mk
 include vendor/cpa/configs/version.mk
 include vendor/cpa/configs/cpa.mk

@@ -1,16 +1,47 @@
 #!/bin/bash
 
-# Version 2.0.4, Adapted for AOSPA.
+# Version 2.0.6, Adapted for AOSPA.
 # Used by CrystalPA
 
 # We don't allow scrollback buffer
 echo -e '\0033\0143'
 clear
 
+function gettop
+{
+	local TOPFILE=build/core/envsetup.mk
+	if [ -n "$TOP" -a -f "$TOP/$TOPFILE" ] ; then
+	echo $TOP
+	else
+	if [ -f $TOPFILE ] ; then
+		# The following circumlocution (repeated below as well) ensures
+		# that we record the true directory name and not one that is
+		# faked up with symlink names.
+		PWD= /bin/pwd
+		else
+		# We redirect cd to /dev/null in case it's aliased to
+		# a command that prints something as a side-effect
+		# (like pushd)
+		local HERE=$PWD
+		T=
+		while [ \( ! \( -f $TOPFILE \) \) -a \( $PWD != "/" \) ]; do
+		cd .. > /dev/null
+		T=`PWD= /bin/pwd`
+		done
+	cd $HERE > /dev/null
+		if [ -f "$T/$TOPFILE" ]; then
+		echo $T
+		fi
+		fi
+	fi
+}
+
+
 # Get current path
 DIR="$(cd `dirname $0`; pwd)"
-OUT="$(readlink $DIR/out)"
-[ -z "${OUT}" ] && OUT="${DIR}/out"
+TOP="$(gettop)"
+OUT="$(readlink $TOP/out)"
+[ -z "${OUT}" ] && OUT="${TOP}/out"
 
 # Prepare output customization commands
 red=$(tput setaf 1)             #  red
@@ -41,10 +72,10 @@ DEVICE="$1"
 EXTRAS="$2"
 
 # Get build version
-MAJOR=$(cat $DIR/vendor/cpa/vendor.mk | grep 'ROM_VERSION_MAJOR := *' | sed  's/ROM_VERSION_MAJOR := //g')
-MINOR=$(cat $DIR/vendor/cpa/vendor.mk | grep 'ROM_VERSION_MINOR := *' | sed  's/ROM_VERSION_MINOR := //g')
-MAINTENANCE=$(cat $DIR/vendor/cpa/vendor.mk | grep 'ROM_VERSION_MAINTENANCE := *' | sed  's/ROM_VERSION_MAINTENANCE := //g')
-CPA=$(cat $DIR/vendor/cpa/vendor.mk | grep 'ROM_CRYSTALPA := *' | sed  's/ROM_CRYSTALPA := //g')
+MAJOR=$(cat $TOP/vendor/cpa/vendor.mk | grep 'ROM_VERSION_MAJOR := *' | sed  's/ROM_VERSION_MAJOR := //g')
+MINOR=$(cat $TOP/vendor/cpa/vendor.mk | grep 'ROM_VERSION_MINOR := *' | sed  's/ROM_VERSION_MINOR := //g')
+MAINTENANCE=$(cat $TOP/vendor/cpa/vendor.mk | grep 'ROM_VERSION_MAINTENANCE := *' | sed  's/ROM_VERSION_MAINTENANCE := //g')
+CPA=$(cat $TOP/vendor/cpa/vendor.mk | grep 'ROM_CRYSTALPA := *' | sed  's/ROM_CRYSTALPA := //g')
 
 if [ -n "$TAG" ]; then
         VERSION=$MAJOR.$MINOR$MAINTENANCE
@@ -77,7 +108,7 @@ case "$EXTRAS" in
         clean|cclean)
                 echo -e "${bldblu}Cleaning intermediates and output files${txtrst}"
                 export CLEAN_BUILD="true"
-                [ -d "${DIR}/out" ] && rm -Rf ${DIR}/out/*
+                [ -d "${TOP}/out" ] && rm -Rf ${TOP}/out/*
         ;;
 esac
 
@@ -96,7 +127,7 @@ if [ "$SYNC" == "true" ]; then
         echo -e ""
 fi
 
-if [ ! -r "${DIR}/out/versions_checked.mk" ] && [ -n "$(java -version 2>&1 | grep -i openjdk)" ]; then
+if [ ! -r "${TOP}/out/versions_checked.mk" ] && [ -n "$(java -version 2>&1 | grep -i openjdk)" ]; then
         echo -e "${bldcya}Your java version still not checked and is candidate to fail, masquerading.${txtrst}"
         JAVA_VERSION="java_version=${JVER}"
 fi

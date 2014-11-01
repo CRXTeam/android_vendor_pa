@@ -17,16 +17,6 @@ PRODUCT_PACKAGES += \
     Busybox \
     Lightbulb
 
-# Source or prebuilt PA-prefs logic
-#ifneq ($(PREFS_FROM_SOURCE),true)
-#    PRODUCT_COPY_FILES += \
-#        vendor/pa/prebuilt/apk/ParanoidPreferences.apk:system/app/ParanoidPreferences.apk
-#else
-#    # Build paprefs from sources
-#    PRODUCT_PACKAGES += \
-#        ParanoidPreferences
-#endif
-
 # CrystalPA
 PRODUCT_PACKAGES += \
     Trebuchet \
@@ -35,4 +25,3 @@ PRODUCT_PACKAGES += \
 # Extra properties
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.cpa.device=$(DEVICE)
-
