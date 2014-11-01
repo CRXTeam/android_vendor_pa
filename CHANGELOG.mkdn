@@ -25,6 +25,8 @@ CHANGELOG (notable new features)
 * huashan: some fixes and updates
 * huashan: improved touchscreen sensitive
 * codina: some fixes and updates
+* P760: GPS fix
+* P760: Kernel update with last linaro
 
 ### 7.00
 * Latest AOSPA
