@@ -20,8 +20,10 @@ CHANGELOG (notable new features)
 * Added Battery Saver mode
 * Added Second Clock
 * Added new bootanimation to all devices
+* Reorganized CrystalPA settings
 * New Devices: OnePlus One (bacon), LG G2 Mini (d620), LG L90 (d405)
 * huashan: some fixes and updates
+* huashan: improved touchscreen sensitive
 * codina: some fixes and updates
 
 ### 7.00
