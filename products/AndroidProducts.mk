@@ -36,6 +36,9 @@ endif
 ifeq (cpa_huashan,$(TARGET_PRODUCT))
     PRODUCT_MAKEFILES += $(LOCAL_DIR)/cpa_huashan.mk
 endif
+ifeq (cpa_huashanlbl,$(TARGET_PRODUCT))
+    PRODUCT_MAKEFILES += $(LOCAL_DIR)/cpa_huashanlbl.mk
+endif
 ifeq (cpa_d605,$(TARGET_PRODUCT))
     PRODUCT_MAKEFILES += $(LOCAL_DIR)/cpa_d605.mk
 endif

@@ -20,7 +20,7 @@ ifneq ($(filter cpa_honami cpa_bacon,$(TARGET_PRODUCT)),)
 endif
 
 #1280x720
-ifneq ($(filter cpa_huashan cpa_d605,$(TARGET_PRODUCT)),)
+ifneq ($(filter cpa_huashan cpa_huashanlbl cpa_d605,$(TARGET_PRODUCT)),)
     PRODUCT_COPY_FILES += \
         vendor/cpa/prebuilt/bootanimation/1280x720.zip:system/media/bootanimation.zip
 endif
