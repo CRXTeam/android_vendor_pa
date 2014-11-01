@@ -33,7 +33,7 @@ $(call inherit-product, vendor/cpa/configs/telephony.mk)
 include vendor/cpa/main.mk
 
 # Inherit AOSP device configuration
-$(call inherit-product, device/sony/huashanlbl/full_huashan.mk)
+$(call inherit-product, device/sony/huashanlbl/full_huashanlbl.mk)
 
 # Override AOSP build properties
 PRODUCT_NAME := cpa_huashanlbl
