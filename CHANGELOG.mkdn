@@ -27,6 +27,9 @@ CHANGELOG (notable new features)
 * codina: some fixes and updates
 * P760: GPS fix
 * P760: Kernel update with last linaro
+* Added support to eagle
+* Eagle: Updated kernel to 3.4.104
+* Eagle: Replaced ONDEMAND with ONDEMANDPLUS (random reboots fix)
 
 ### 7.00
 * Latest AOSPA
