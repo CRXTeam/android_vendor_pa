@@ -55,6 +55,9 @@ bldblu=${txtbld}$(tput setaf 4) #  blue
 bldcya=${txtbld}$(tput setaf 6) #  cyan
 txtrst=$(tput sgr0)             # Reset
 
+#check for architecture
+ARCH=$(uname -m | sed 's/x86_//;s/i[3-6]86/32/')
+
 # Local defaults, can be overriden by environment
 : ${PREFS_FROM_SOURCE:="false"}
 : ${THREADS:="$(cat /proc/cpuinfo | grep "^processor" | wc -l)"}
@@ -70,6 +73,8 @@ JVER=$(javac -version  2>&1 | head -n1 | cut -f2 -d' ')
 # Import command line parameters
 DEVICE="$1"
 EXTRAS="$2"
+
+if [ $ARCH = "64" ]; then
 
 # Get build version
 MAJOR=$(cat $TOP/vendor/cpa/vendor.mk | grep 'ROM_VERSION_MAJOR := *' | sed  's/ROM_VERSION_MAJOR := //g')
@@ -161,3 +166,7 @@ echo -e ""
 # Get elapsed time
 res2=$(date +%s.%N)
 echo -e "${bldgrn}Total time elapsed: ${txtrst}${grn}$(echo "($res2 - $res1) / 60"|bc ) minutes ($(echo "$res2 - $res1"|bc ) seconds)${txtrst}"
+else
+echo -e "${bldred}This script only supports 64 bit architecture${txtrst}"
+fi
+
