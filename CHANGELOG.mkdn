@@ -7,6 +7,7 @@ CHANGELOG (notable new features)
 ---------
 ### 8.00
 * Latest AOSPA
+* New Devices: OnePlus One (bacon), LG G2 Mini (d620), LG L90 (d405), Sony Xperia M2 (eagle)
 * Added QuietHours
 * Added Blacklist
 * Added Custom label
@@ -21,15 +22,13 @@ CHANGELOG (notable new features)
 * Added Second Clock
 * Added new bootanimation to all devices
 * Reorganized CrystalPA settings
-* New Devices: OnePlus One (bacon), LG G2 Mini (d620), LG L90 (d405)
 * huashan: some fixes and updates
 * huashan: improved touchscreen sensitive
 * codina: some fixes and updates
 * P760: GPS fix
 * P760: Kernel update with last linaro
-* Added support to eagle
-* Eagle: Updated kernel to 3.4.104
-* Eagle: Replaced ONDEMAND with ONDEMANDPLUS (random reboots fix)
+* eagle: Updated kernel to 3.4.104
+* eagle: Replaced ONDEMAND with ONDEMANDPLUS (random reboots fix)
 
 ### 7.00
 * Latest AOSPA
