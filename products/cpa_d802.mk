@@ -8,6 +8,7 @@
 # limitations under the License.
 
 # Check for target product
+ifeq (cpa_d802,$(TARGET_PRODUCT))
 
 #HAVE NFC?
 HAVE_NFC := true
