@@ -14,7 +14,7 @@
 # limitations under the License.
 
 #1920x1080
-ifneq ($(filter cpa_honami cpa_bacon,$(TARGET_PRODUCT)),)
+ifneq ($(filter cpa_honami cpa_d802 cpa_bacon,$(TARGET_PRODUCT)),)
     PRODUCT_COPY_FILES += \
         vendor/cpa/prebuilt/bootanimation/1920x1080.zip:system/media/bootanimation.zip
 endif
