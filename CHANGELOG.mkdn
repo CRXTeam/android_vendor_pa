@@ -5,6 +5,11 @@ Visit http://github.com/CRXTeam for full source and git access.
 
 CHANGELOG (notable new features)
 ---------
+### 8.50
+* Latest AOSPA
+* Added Dynamic System Bars
+* huashan: fixed bluetooth
+
 ### 8.00
 * Latest AOSPA
 * New Devices: OnePlus One (bacon), LG G2 Mini (d620), LG L90 (d405), Sony Xperia M2 (eagle)
