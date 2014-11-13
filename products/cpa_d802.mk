@@ -1,3 +1,8 @@
+# Copyright (C) 2014 CrystalPA Project
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
 #
 # http://www.apache.org/licenses/LICENSE-2.0
 #
@@ -8,6 +13,7 @@
 # limitations under the License.
 
 # Check for target product
+
 ifeq (cpa_d802,$(TARGET_PRODUCT))
 
 #HAVE NFC?
@@ -16,7 +22,6 @@ HAVE_NFC := true
 # OVERLAY_TARGET adds overlay asset source
 OVERLAY_TARGET := cpa_xxhdpi
 
-# Build paprefs from sources
 PREFS_FROM_SOURCE ?= false
 
 ROM_VERSION_TAG := OFFICIAL
@@ -24,19 +29,17 @@ ROM_VERSION_TAG := OFFICIAL
 # Inherit telephony common stuff
 $(call inherit-product, vendor/cpa/configs/telephony.mk)
 
-# Include AOSPA common configuration
+# Include CPA common configuration
 include vendor/cpa/main.mk
 
 # Inherit device configuration
-$(call inherit-product, device/lge/d802/d802.mk)
+$(call inherit-product, device/lge/d802/full_d802.mk)
 
-# Device identifier. This must come after all inclusions
-PRODUCT_DEVICE := d802
+# Override AOSP build properties
 PRODUCT_NAME := cpa_d802
-PRODUCT_BRAND := LGE
+PRODUCT_DEVICE := d802
+PRODUCT_BRAND := lge
+PRODUCT_MANUFACTURER := LGE
 PRODUCT_MODEL := LG-D802
-PRODUCT_MANUFACTURER := lge
-
-PRODUCT_BUILD_PROP_OVERRIDES += PRODUCT_NAME=d802 BUILD_FINGERPRINT=lge/g2_open_com/g2:4.4.2/KOT49I.D80220a/D80220a.1392133741:user/release-keys PRIVATE_BUILD_DESC="g2_open_com-user 4.4.2 KOT49I.D80220a D80220a.1392133741 release-keys"
 
 endif
