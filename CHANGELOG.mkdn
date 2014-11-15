@@ -9,10 +9,13 @@ CHANGELOG (notable new features)
 * Latest AOSPA
 * Added Dynamic System Bars
 * huashan: fixed bluetooth
+* huashan: changed dpi to 280
+* eagle: changed dpi to 220
+* eagle: some changes in device tree
 
 ### 8.00
 * Latest AOSPA
-* New Devices: OnePlus One (bacon), LG G2 Mini (d620), LG L90 (d405), Sony Xperia M2 (eagle)
+* New Devices: LG G2 Mini (d620), LG L90 (d405) and Sony Xperia M2 (eagle)
 * Added QuietHours
 * Added Blacklist
 * Added Custom label
