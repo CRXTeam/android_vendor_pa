@@ -1,0 +1,10 @@
+CrystalPA2
+===============
+
+Visit http://github.com/CRXTeam for full source and git access.
+
+CHANGELOG (notable new features)
+---------
+### 1.0
+* Latest AOSPA
+* Status bar brightness control
