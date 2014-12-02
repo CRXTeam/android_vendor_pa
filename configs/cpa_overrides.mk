@@ -13,9 +13,9 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-PRODUCT_PACKAGES += \
-    Busybox \
-    Lightbulb
+# PRODUCT_PACKAGES += \
+    # Busybox \
+    # Lightbulb
 
 # CrystalPA
 PRODUCT_PACKAGES += \
