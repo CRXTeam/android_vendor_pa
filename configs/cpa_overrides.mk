@@ -14,7 +14,7 @@
 # limitations under the License.
 
 # PRODUCT_PACKAGES += \
-    # Busybox \
+    busybox
     # Lightbulb
 
 # CrystalPA
