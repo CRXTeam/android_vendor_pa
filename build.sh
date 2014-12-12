@@ -124,6 +124,9 @@ export DEVICE=$DEVICE
 #Use Prebuilt Chromium
 export USE_PREBUILT_CHROMIUM=1
 
+#Generate Changelog
+export CHANGELOG=true
+
 # Fetch latest sources
 if [ "$SYNC" == "true" ]; then
         echo -e ""
