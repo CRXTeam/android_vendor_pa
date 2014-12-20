@@ -32,13 +32,13 @@ ifneq ($(filter cpa_eagle cpa_d620 cpa_w7 cpa_p760,$(TARGET_PRODUCT)),)
 endif
 
 #800x480
-ifneq ($(filter cpa_codina cpa_janice cpa_p700 cpa_705,$(TARGET_PRODUCT)),)
+ifneq ($(filter cpa_codina cpa_janice,$(TARGET_PRODUCT)),)
     PRODUCT_COPY_FILES += \
         vendor/cpa/prebuilt/bootanimation/800x480.zip:system/media/bootanimation.zip
 endif
 
 #480x320
-ifneq ($(filter cpa_e610,$(TARGET_PRODUCT)),)
-    PRODUCT_COPY_FILES += \
-        vendor/cpa/prebuilt/bootanimation/480x320.zip:system/media/bootanimation.zip
-endif
+#ifneq ($(filter cpa_,$(TARGET_PRODUCT)),)
+#    PRODUCT_COPY_FILES += \
+#        vendor/cpa/prebuilt/bootanimation/480x320.zip:system/media/bootanimation.zip
+#endif
