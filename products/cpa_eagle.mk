@@ -21,8 +21,6 @@ OVERLAY_TARGET := cpa_hdpi
 
 PREFS_FROM_SOURCE ?= false
 
-ROM_VERSION_TAG := OFFICIAL
-
 # Inherit telephony common stuff
 $(call inherit-product, vendor/cpa/configs/telephony.mk)
 
@@ -30,13 +28,21 @@ $(call inherit-product, vendor/cpa/configs/telephony.mk)
 include vendor/cpa/main.mk
 
 # Inherit AOSP device configuration
-$(call inherit-product, device/sony/eagle/full_eagle.mk)
+$(call inherit-product, device/sony/eagle/eagle.mk)
 
-# Override AOSP build properties
+# Inherit from common resources
+$(call inherit-product, device/sony/common/resources.mk)
+
+# Product attributes
 PRODUCT_NAME := cpa_eagle
 PRODUCT_DEVICE := eagle
+PRODUCT_MODEL := Xperia M2
 PRODUCT_BRAND := Sony
 PRODUCT_MANUFACTURER := Sony
-PRODUCT_MODEL := D2303
+
+PRODUCT_BUILD_PROP_OVERRIDES += \
+    PRODUCT_NAME=D2303 \
+    BUILD_FINGERPRINT=Sony/D2303/D2303:4.4.4/18.3.1.C.0.21/2n9_bg:user/release-keys \
+    PRIVATE_BUILD_DESC="D2303-user 18.3.1.C.0.21 2n9_bg release-keys"
 
 endif
