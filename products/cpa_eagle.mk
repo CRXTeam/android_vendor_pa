@@ -33,6 +33,9 @@ $(call inherit-product, device/sony/eagle/eagle.mk)
 # Inherit from common resources
 $(call inherit-product, device/sony/common/resources.mk)
 
+PRODUCT_AAPT_CONFIG := normal hdpi
+PRODUCT_AAPT_PREF_CONFIG := hdpi
+
 # Product attributes
 PRODUCT_NAME := cpa_eagle
 PRODUCT_DEVICE := eagle
