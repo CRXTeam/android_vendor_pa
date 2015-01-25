@@ -16,13 +16,15 @@
 
 ifeq (cpa_w7,$(TARGET_PRODUCT))
 
-#HAVE NFC?
+# HAVE NFC?
 HAVE_NFC := true
 
 # OVERLAY_TARGET adds overlay asset source
 OVERLAY_TARGET := cpa_hdpi
 
 PREFS_FROM_SOURCE ?= false
+
+ROM_VERSION_TAG := OFFICIAL
 
 # Inherit telephony common stuff
 $(call inherit-product, vendor/cpa/configs/telephony.mk)
