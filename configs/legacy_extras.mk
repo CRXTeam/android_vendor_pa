@@ -43,6 +43,7 @@ PRODUCT_PACKAGES += \
 # Extra packages
 PRODUCT_PACKAGES += \
     BluetoothExt \
+    CMFileManager \
     Eleven
 
 # Extra tools
