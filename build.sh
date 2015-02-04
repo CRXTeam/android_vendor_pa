@@ -77,10 +77,10 @@ EXTRAS="$2"
 if [ $ARCH = "64" ]; then
 
 # Get build version
-MAJOR=$(cat $TOP/vendor/cpa/vendor.mk | grep 'ROM_VERSION_MAJOR := *' | sed  's/ROM_VERSION_MAJOR := //g')
-MINOR=$(cat $TOP/vendor/cpa/vendor.mk | grep 'ROM_VERSION_MINOR := *' | sed  's/ROM_VERSION_MINOR := //g')
-MAINTENANCE=$(cat $TOP/vendor/cpa/vendor.mk | grep 'ROM_VERSION_MAINTENANCE := *' | sed  's/ROM_VERSION_MAINTENANCE := //g')
-CPA=$(cat $TOP/vendor/cpa/vendor.mk | grep 'ROM_CRYSTALPA := *' | sed  's/ROM_CRYSTALPA := //g')
+MAJOR=$(cat $TOP/vendor/cpa/vendor.mk | grep 'CPA_VERSION_MAJOR := *' | sed  's/ROM_VERSION_MAJOR := //g')
+MINOR=$(cat $TOP/vendor/cpa/vendor.mk | grep 'CPA_VERSION_MINOR := *' | sed  's/ROM_VERSION_MINOR := //g')
+MAINTENANCE=$(cat $TOP/vendor/cpa/vendor.mk | grep 'CPA_VERSION_MAINTENANCE := *' | sed  's/ROM_VERSION_MAINTENANCE := //g')
+CPA=$(cat $TOP/vendor/cpa/vendor.mk | grep 'CPA_VERSION_TAG := *' | sed  's/CPA_VERSION_TAG := //g')
 
 if [ -n "$TAG" ]; then
         VERSION=$MAJOR.$MINOR$MAINTENANCE
