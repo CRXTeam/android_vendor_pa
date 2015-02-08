@@ -21,6 +21,9 @@ endif
 ifeq (cpa_coconut,$(TARGET_PRODUCT))
     PRODUCT_MAKEFILES += $(LOCAL_DIR)/cpa_coconut.mk
 endif
+ifeq (cpa_g2m,$(TARGET_PRODUCT))
+    PRODUCT_MAKEFILES += $(LOCAL_DIR)/cpa_g2m.mk
+endif
 ifeq (cpa_honami,$(TARGET_PRODUCT))
     PRODUCT_MAKEFILES += $(LOCAL_DIR)/cpa_honami.mk
 endif
@@ -32,9 +35,6 @@ ifeq (cpa_huashanlbl,$(TARGET_PRODUCT))
 endif
 ifeq (cpa_d605,$(TARGET_PRODUCT))
     PRODUCT_MAKEFILES += $(LOCAL_DIR)/cpa_d605.mk
-endif
-ifeq (cpa_d620,$(TARGET_PRODUCT))
-    PRODUCT_MAKEFILES += $(LOCAL_DIR)/cpa_d620.mk
 endif
 ifeq (cpa_d802,$(TARGET_PRODUCT))
     PRODUCT_MAKEFILES += $(LOCAL_DIR)/cpa_d802.mk

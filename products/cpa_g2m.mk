@@ -14,7 +14,7 @@
 
 # Check for target product
 
-ifeq (cpa_d620,$(TARGET_PRODUCT))
+ifeq (cpa_g2m,$(TARGET_PRODUCT))
 
 # OVERLAY_TARGET adds overlay asset source
 OVERLAY_TARGET := cpa_hdpi
@@ -28,23 +28,15 @@ $(call inherit-product, vendor/cpa/configs/telephony.mk)
 include vendor/cpa/main.mk
 
 # Inherit device configuration
-$(call inherit-product, device/lge/d620/full_d620.mk)
+$(call inherit-product, device/lge/g2m/full_g2m.mk)
 
 # Override AOSP build properties
-PRODUCT_DEVICE := d620
-PRODUCT_NAME := cpa_d620
+PRODUCT_DEVICE := g2m
+PRODUCT_NAME := cpa_g2m
 PRODUCT_BRAND := lge
 PRODUCT_MODEL := LG-D620
 PRODUCT_MANUFACTURER := LGE
 
 ROM_VERSION_TAG := OFFICIAL
 
-# override
-#PRODUCT_BUILD_PROP_OVERRIDES += \
-    #BUILD_NUMBER=144808 \
-    #PRODUCT_NAME=p705 \
-    #TARGET_BUILD_TYPE=user \
-    #BUILD_VERSION_TAGS=release-keys \
-    #PRIVATE_BUILD_DESC="p705-user 4.4.2 KVT49L 144808 release-keys" \
-    #BUILD_FINGERPRINT="lge/p705/4.4.2/KVT49L/144808:user/release-keys"
 endif

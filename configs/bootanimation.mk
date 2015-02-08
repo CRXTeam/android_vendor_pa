@@ -26,7 +26,7 @@ ifneq ($(filter cpa_huashan cpa_huashanlbl cpa_d605,$(TARGET_PRODUCT)),)
 endif
 
 #960x540
-ifneq ($(filter cpa_eagle cpa_d620 cpa_w7 cpa_p760,$(TARGET_PRODUCT)),)
+ifneq ($(filter cpa_eagle cpa_g2m cpa_w7 cpa_p760,$(TARGET_PRODUCT)),)
     PRODUCT_COPY_FILES += \
         vendor/cpa/prebuilt/bootanimation/960x540.zip:system/media/bootanimation.zip
 endif

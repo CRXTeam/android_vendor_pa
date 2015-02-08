@@ -1,9 +1,9 @@
 add_lunch_combo cpa_codina-userdebug
 add_lunch_combo cpa_janice-userdebug
 add_lunch_combo cpa_d605-userdebug
-add_lunch_combo cpa_d620-userdebug
 add_lunch_combo cpa_d802-userdebug
 add_lunch_combo cpa_coconut-userdebug
+add_lunch_combo cpa_g2m-userdebug
 add_lunch_combo cpa_honami-userdebug
 add_lunch_combo cpa_huashan-userdebug
 add_lunch_combo cpa_huashanlbl-userdebug
