@@ -121,8 +121,13 @@ echo -e ""
 
 export DEVICE=$DEVICE
 
-#Use Prebuilt Chromium
-export USE_PREBUILT_CHROMIUM=1
+CHROMIUM=$(cat $TOP/vendor/cpa/products/cpa_$DEVICE.mk | grep 'PREBUILD_CHROMIUM := *' | sed  's/PREBUILD_CHROMIUM := //g')
+	if [ "$CHROMIUM" == "false" ]; then
+        	export USE_PREBUILT_CHROMIUM=0
+        	echo -e "In your $DEVICE tree CHROMIUM PREBUILT IS DISABLED!"
+        else
+        	export USE_PREBUILT_CHROMIUM=1        
+	fi
 
 #Generate Changelog
 export CHANGELOG=true
@@ -161,12 +166,6 @@ else
         export PREFS_FROM_SOURCE
         lunch "cpa_$DEVICE-userdebug";
         
-        CHROMIUM=$(cat $TOP/vendor/cpa/products/cpa_$DEVICE.mk | grep 'PREBUILD_CHROMIUM := *' | sed  's/PREBUILD_CHROMIUM := //g')
-        if [ "$CHROMIUM" == "false" ]; then
-        	export USE_PREBUILT_CHROMIUM=0
-        	echo -e "In your $DEVICE tree CHROMIUM PREBUILT IS DISABLED!"
-	fi
-
         echo -e "${bldblu}Starting compilation${txtrst}"
         mka bacon
 fi
