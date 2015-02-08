@@ -160,6 +160,12 @@ else
         echo -e "${bldblu}Lunching device [$DEVICE] ${cya}(Includes dependencies sync)${txtrst}"
         export PREFS_FROM_SOURCE
         lunch "cpa_$DEVICE-userdebug";
+        
+        CHROMIUM=$(cat $DIR/vendor/cpa/products/cpa_$DEVICE.mk | grep 'PREBUILD_CHROMIUM := *' | sed  's/PREBUILD_CHROMIUM := //g')
+        if [ "$CHROMIUM" == "false" ]; then
+        	export USE_PREBUILT_CHROMIUM=0
+        	echo -e "In your $DEVICE tree CHROMIUM PREBUILT IS DISABLED!"
+	fi
 
         echo -e "${bldblu}Starting compilation${txtrst}"
         mka bacon
