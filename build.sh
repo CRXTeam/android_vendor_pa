@@ -130,7 +130,13 @@ CHROMIUM=$(cat $TOP/vendor/cpa/products/cpa_$DEVICE.mk | grep 'PREBUILD_CHROMIUM
 	fi
 
 #Generate Changelog
-export CHANGELOG=true
+ZMIANY=$(cat $TOP/vendor/cpa/products/cpa_$DEVICE.mk | grep 'CHCE_CHANGELOG := *' | sed  's/CHCE_CHANGELOG := //g')
+	if [ "$ZMIANY" == "true" ]; then
+        	export CHANGELOG=true
+        	echo -e "Changelog for $DEVICE is enabled!"
+        else
+        	export CHANGELOG=false      
+	fi
 
 # Fetch latest sources
 if [ "$SYNC" == "true" ]; then
