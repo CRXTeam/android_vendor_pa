@@ -19,7 +19,7 @@ PRODUCT_PACKAGE_OVERLAYS += vendor/$(VENDOR)/overlay/$(TARGET_PRODUCT)
 
 # Copy custom ramdisk
 PRODUCT_COPY_FILES += \
-    vendor/$(VENDOR)/prebuilt/etc/init.pa.rc:root/init.pa.rc
+    vendor/$(VENDOR)/prebuilt/etc/init.cpa.rc:root/init.cpa.rc
 
 # init.d script support
 PRODUCT_COPY_FILES += \
@@ -36,13 +36,14 @@ PRODUCT_COPY_FILES += \
 #    vendor/$(VENDOR)/prebuilt/bin/50-backupScript.sh:system/addon.d/50-backupScript.sh
 
 # SU Support
-SUPERUSER_EMBEDDED := true
+# SUPERUSER_EMBEDDED := true
 
-PRODUCT_PACKAGES := \
-    su
+# PRODUCT_PACKAGES := \
+#    Superuser \
+#    su
 
-PRODUCT_PROPERTY_OVERRIDES += \
-    persist.sys.root_access=3
+# PRODUCT_PROPERTY_OVERRIDES += \
+#    persist.sys.root_access=3
     
 # OTA
 PRODUCT_PACKAGES += \

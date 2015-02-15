@@ -1,6 +1,4 @@
-# ParanoidAndroid Extras
-# Superuser
-import /init.superuser.rc
+# CPA2 Extras
 
 on init
     export ANDROID_CACHE /cache
