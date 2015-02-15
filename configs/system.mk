@@ -19,7 +19,7 @@ PRODUCT_PACKAGE_OVERLAYS += vendor/$(VENDOR)/overlay/$(TARGET_PRODUCT)
 
 # Copy custom ramdisk
 PRODUCT_COPY_FILES += \
-    vendor/$(VENDOR)/prebuilt/etc/init.cpa.rc:root/init.cpa.rc
+    vendor/$(VENDOR)/prebuilt/etc/init.pa.rc:root/init.pa.rc
 
 # init.d script support
 PRODUCT_COPY_FILES += \
