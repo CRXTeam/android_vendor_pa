@@ -37,7 +37,6 @@ PRODUCT_COPY_FILES += \
 
 # SU Support
 SUPERUSER_EMBEDDED := true
-SUPERUSER_PACKAGE_PREFIX := com.android.settings.cyanogenmod.superuser
 
 PRODUCT_PACKAGES := \
     su
