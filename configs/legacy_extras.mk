@@ -44,7 +44,8 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     BluetoothExt \
     CMFileManager \
-    Eleven
+    Eleven \
+    AudioFX
 
 # Extra tools
 PRODUCT_PACKAGES += \
