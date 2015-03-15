@@ -41,11 +41,13 @@ PRODUCT_PACKAGES += \
     org.cyanogenmod.hardware.xml
 
 # Extra packages
+ifneq ($(TARGET_LOW_RAM_DEVICE), true)
 PRODUCT_PACKAGES += \
     BluetoothExt \
     CMFileManager \
     Eleven \
     AudioFX
+endif
 
 # Extra tools
 PRODUCT_PACKAGES += \

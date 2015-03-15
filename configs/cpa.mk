@@ -1,6 +1,8 @@
 # CrystalPA Apps
+ifneq ($(TARGET_LOW_RAM_DEVICE), true)
 PRODUCT_PACKAGES += \
-    CPAWallpapers \
+    CPAWallpapers
+endif
 
 # Changelog
 PRODUCT_COPY_FILES += \
